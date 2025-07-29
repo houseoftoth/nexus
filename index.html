@@ -10,8 +10,8 @@
       margin: 0;
       background: #0a0a0a;
       overflow: hidden;
-      color: #d4af37; /* Golden for occult feel */
-      font-family: 'UnifrakturCook', cursive; /* Gothic font */
+      color: #c71585; /* Magenta for gothic wizardry */
+      font-family: 'UnifrakturCook', cursive;
       font-size: 16px;
     }
     canvas {
@@ -22,12 +22,12 @@
     }
     .glyph {
       position: absolute;
-      color: #8b0000; /* Dark red for gothic occult */
+      color: #800080; /* Violet for arcane feel */
       font-size: 2rem;
       pointer-events: none;
       z-index: 1;
       animation: flicker 1.5s infinite alternate, rotate 10s linear infinite;
-      text-shadow: 0 0 10px #ff4500;
+      text-shadow: 0 0 10px #00ff00; /* Neon green glow */
     }
     @keyframes flicker {
       0% { opacity: 0.6; }
@@ -43,17 +43,17 @@
       right: 20px;
       width: 250px;
       background: rgba(0, 0, 0, 0.8);
-      border: 2px solid #d4af37;
+      border: 2px solid #c71585; /* Magenta border */
       padding: 15px;
       z-index: 20;
-      box-shadow: 0 0 20px #ff4500;
+      box-shadow: 0 0 20px #00ff00; /* Neon green shadow */
       border-radius: 10px;
     }
     .button {
       background: #1a1a1a;
-      border: 1px solid #d4af37;
+      border: 1px solid #c71585;
       padding: 8px 12px;
-      color: #d4af37;
+      color: #c71585;
       cursor: pointer;
       margin-bottom: 10px;
       width: 100%;
@@ -63,7 +63,7 @@
       transition: background 0.3s, color 0.3s;
     }
     .button:hover {
-      background: #d4af37;
+      background: #00ff00; /* Neon green on hover */
       color: #0a0a0a;
     }
     .slider-container {
@@ -72,23 +72,25 @@
     .slider-label {
       font-size: 14px;
       margin-bottom: 5px;
+      color: #c71585;
     }
     input[type="range"] {
       width: 100%;
+      accent-color: #00ff00; /* Neon green slider */
     }
     .scroll-tab {
       position: absolute;
       left: 20px;
       bottom: 60px;
-      background: linear-gradient(to right, #4b0082, #8b008b); /* Purple for esoteric */
+      background: linear-gradient(to right, #4b0082, #800080); /* Indigo to violet */
       padding: 12px 16px;
-      border: 2px solid #d4af37;
-      color: #ffd700;
+      border: 2px solid #c71585;
+      color: #00ff00; /* Neon green text */
       font-family: 'UnifrakturCook', cursive;
       font-size: 18px;
       cursor: pointer;
       z-index: 10;
-      box-shadow: 0 0 15px #ff4500;
+      box-shadow: 0 0 15px #00ff00;
       border-radius: 5px;
     }
     .ruler {
@@ -97,8 +99,8 @@
       left: 0;
       width: 100vw;
       height: 50px;
-      background: repeating-linear-gradient(to right, #d4af37 0 2px, transparent 2px 15px);
-      border-top: 3px solid #d4af37;
+      background: repeating-linear-gradient(to right, #c71585 0 2px, transparent 2px 15px);
+      border-top: 3px solid #c71585;
       z-index: 5;
     }
     .ruler-circle {
@@ -109,9 +111,9 @@
       height: 50px;
       margin-left: -25px;
       border-radius: 50%;
-      background: rgba(139, 0, 0, 0.4); /* Dark red glow */
-      border: 3px solid #d4af37;
-      box-shadow: 0 0 15px #ff4500;
+      background: rgba(75, 0, 130, 0.4); /* Indigo glow */
+      border: 3px solid #c71585;
+      box-shadow: 0 0 15px #00ff00;
       z-index: 6;
       cursor: grab;
     }
@@ -122,13 +124,13 @@
       width: 250px;
       max-height: 400px;
       overflow-y: auto;
-      background: rgba(0,0,0,0.8);
-      border: 2px solid #d4af37;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid #c71585;
       padding: 15px;
       font-size: 14px;
-      color: #d4af37;
+      color: #c71585;
       z-index: 10;
-      box-shadow: 0 0 20px #ff4500;
+      box-shadow: 0 0 20px #00ff00;
       border-radius: 10px;
     }
     .bookmark-entry {
@@ -142,28 +144,108 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 10rem;
-      color: #ff4500;
+      color: #800080; /* Violet sigil */
       opacity: 0.3;
       pointer-events: none;
       z-index: 1;
       animation: pulse 5s infinite;
+      text-shadow: 0 0 15px #00ff00; /* Neon green glow */
     }
     @keyframes pulse {
       0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
       50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.5; }
       100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
     }
+    .imprint-panel {
+      position: fixed;
+      bottom: 120px;
+      left: 20px;
+      width: 250px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid #c71585;
+      padding: 15px;
+      z-index: 20;
+      box-shadow: 0 0 20px #00ff00;
+      border-radius: 10px;
+    }
+    .imprint-textarea {
+      width: 100%;
+      height: 100px;
+      background: #1a1a1a;
+      color: #c71585;
+      border: 1px solid #c71585;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .math-display {
+      position: fixed;
+      top: 50px;
+      right: 300px;
+      color: #800080; /* Violet math display */
+      font-size: 20px;
+      opacity: 0.5;
+      z-index: 10;
+      animation: flicker 3s infinite;
+      text-shadow: 0 0 10px #00ff00;
+    }
+    .portal-link {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(45deg, #800080, #c71585, #00ff00, #4b0082); /* Rainbow gradient */
+      border: 3px solid #c71585;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #00ff00;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 16px;
+      text-decoration: none;
+      z-index: 20;
+      box-shadow: 0 0 20px #00ff00;
+      animation: pulse 3s infinite;
+      position: relative;
+      overflow: hidden;
+    }
+    .portal-link::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(transparent, #800080, transparent, #c71585, transparent, #00ff00, transparent, #4b0082, transparent);
+      animation: rotate 10s linear infinite;
+      opacity: 0.3;
+    }
+    .portal-link span {
+      position: relative;
+      z-index: 1;
+    }
+    .portal-link:hover {
+      background: #00ff00;
+      color: #0a0a0a;
+      box-shadow: 0 0 30px #00ff00;
+    }
   </style>
 </head>
 <body>
   <canvas id="portalCanvas"></canvas>
-  <div class="central-sigil">✡️</div> <!-- Central occult sigil -->
+  <div class="central-sigil">✡️</div>
   <div class="ui-panel">
     <div class="button" onclick="spawnGlyphs()">🕸️ Invoke Sigils</div>
     <div class="button" onclick="spawnEntities()">👽 Summon UFO Entities</div>
     <div class="button" onclick="toggleMatrix()">🌐 Toggle Aether Grid</div>
     <div class="button" id="freezeBtn" onclick="toggleFreezeTime()">❄️ Freeze the Veil</div>
     <div class="button" onclick="addBookmark()">📿 Etch Rune</div>
+    <div class="button" onclick="spawnCylinders()">⚙️ Conjure Metallic Cylinders</div>
+    <div class="button" id="disintegratorBtn" onclick="toggleDisintegrator()">🔫 Arm Disintegrator</div>
+    <div class="button" onclick="resetEntanglement()">🔄 Reset Entanglement</div>
     <div class="slider-container">
       <div class="slider-label">Entity Speed</div>
       <input type="range" min="1" max="50" value="20" id="speedSlider" oninput="updateSpeed(this.value)">
@@ -177,6 +259,12 @@
   <div class="ruler"></div>
   <div class="ruler-circle" id="rulerCircle" draggable="true"></div>
   <div class="bookmark-log" id="bookmarkLog"></div>
+  <div class="imprint-panel">
+    <textarea class="imprint-textarea" id="imprintInput" placeholder="Imprint your thoughts, desires, divinations..."></textarea>
+    <div class="button" onclick="submitImprint()">🖋️ Imprint</div>
+  </div>
+  <div class="math-display" id="mathDisplay"></div>
+  <a href="https://grok.com" target="_blank" class="portal-link"><span>Enter Grok Nexus</span></a>
 
   <script>
     const canvas = document.getElementById('portalCanvas');
@@ -184,7 +272,6 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Enhanced stars with twinkling
     const stars = Array.from({length: 300}, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -192,7 +279,14 @@
       twinkle: Math.random() * 0.5 + 0.5
     }));
 
-    // Esoteric glyphs with more occult symbols
+    const particles = Array.from({length: 200}, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vy: Math.random() * 2 + 1,
+      size: Math.random() * 2 + 1,
+      opacity: Math.random() * 0.5 + 0.3
+    }));
+
     const glyphs = ['☥','✶','⧉','ϕ','⨽','⧊','⨽','ገ0','⧫','⊗','♃','♄','♅','♆','⚕','☠','☽','☾'];
 
     let glyphCount = 12;
@@ -208,7 +302,7 @@
         glyph.style.left = Math.random() * window.innerWidth + 'px';
         glyph.style.top = Math.random() * window.innerHeight + 'px';
         document.body.appendChild(glyph);
-        setTimeout(() => glyph.remove(), 7000); // Longer duration
+        setTimeout(() => glyph.remove(), 7000);
       }
     }
 
@@ -219,13 +313,13 @@
       entry.className = 'bookmark-entry';
       entry.innerText = `🕯️ ${now.toLocaleString()} - Arcane Imprint`;
       log.appendChild(entry);
-      log.scrollTop = log.scrollHeight; // Auto-scroll to bottom
+      log.scrollTop = log.scrollHeight;
     }
 
     let frozen = false;
     function toggleFreezeTime() {
       frozen = !frozen;
-      document.getElementById('freezeBtn').innerText = frozen ? '🔥 Thaw the Veil' : '❄️ Freeze the Veil';
+      document.getElementById('freezeBtn').innerText = frozen ? '🌌 Thaw the Veil' : '❄️ Freeze the Veil';
       if (!frozen) animate();
     }
 
@@ -234,7 +328,6 @@
       showMatrix = !showMatrix;
     }
 
-    // UFO-themed entities
     const flyingEntities = ['🛸', '👽', '🛰️', '☄️', '🌌', '🔮', '🪐'];
     let entitySpeed = 20;
     function updateSpeed(value) {
@@ -254,21 +347,21 @@
       size: 25 + Math.random() * 40
     }));
 
-    // Metallic cylinders with gothic twist (like ancient rods)
-    const cylinderSpeeds = [1.4890, 0.5410, 2.4253, 1.618]; // Added golden ratio
-    const metallicCylinders = Array.from({length: 15}, (_, i) => ({
+    const cylinderSpeeds = [1.4890, 0.5410, 2.4253, 1.618];
+    let metallicCylinders = Array.from({length: 15}, (_, i) => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * cylinderSpeeds[i % cylinderSpeeds.length] * 15,
       vy: (Math.random() - 0.5) * cylinderSpeeds[(i + 1) % cylinderSpeeds.length] * 15,
       radius: 8 + Math.random() * 12,
-      length: 50 + Math.random() * 80
+      length: 50 + Math.random() * 80,
+      angle: Math.atan2((Math.random() - 0.5) * cylinderSpeeds[(i + 1) % cylinderSpeeds.length] * 15, (Math.random() - 0.5) * cylinderSpeeds[i % cylinderSpeeds.length] * 15)
     }));
 
     const polyhedra = [];
     function spawnEntities() {
-      const colors = ['#8b0000','#4b0082','#ff4500','#d4af37','#00008b']; // Gothic palette
-      for (let i = 0; i < 6; i++) { // More entities
+      const colors = ['#800080','#4b0082','#c71585','#00ff00']; /* Violet, indigo, magenta, neon green */
+      for (let i = 0; i < 6; i++) {
         polyhedra.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -282,7 +375,7 @@
     }
 
     function drawStars() {
-      ctx.fillStyle = '#ffd700'; // Golden stars for occult
+      ctx.fillStyle = '#c71585'; /* Magenta stars */
       stars.forEach(star => {
         ctx.globalAlpha = star.twinkle + Math.sin(Date.now() / 1000) * 0.2;
         ctx.beginPath();
@@ -292,8 +385,24 @@
       ctx.globalAlpha = 1;
     }
 
+    function drawParticles() {
+      ctx.fillStyle = '#00ff00'; /* Neon green particles */
+      particles.forEach(p => {
+        ctx.globalAlpha = p.opacity;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        p.y += p.vy;
+        if (p.y > canvas.height) {
+          p.y = 0;
+          p.x = Math.random() * canvas.width;
+        }
+      });
+      ctx.globalAlpha = 1;
+    }
+
     function drawMatrixGrid() {
-      ctx.strokeStyle = '#ff4500'; // Fiery red
+      ctx.strokeStyle = '#800080'; /* Violet grid */
       ctx.lineWidth = 1;
       for (let i = 0; i < canvas.width; i += 60) {
         ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, canvas.height); ctx.stroke();
@@ -305,8 +414,13 @@
 
     function drawFlyingObjects() {
       animatedObjects.forEach(obj => {
+        const gradient = ctx.createRadialGradient(obj.x, obj.y, 0, obj.x, obj.y, obj.size);
+        gradient.addColorStop(0, '#c71585'); /* Magenta center */
+        gradient.addColorStop(0.5, '#800080'); /* Violet mid */
+        gradient.addColorStop(1, 'rgba(0, 255, 0, 0)'); /* Fade to transparent neon green */
         ctx.font = `${obj.size}px serif`;
-        ctx.fillStyle = '#d4af37';
+        ctx.fillStyle = gradient;
+        ctx.globalAlpha = 0.7 + Math.sin(Date.now() / 500) * 0.2; /* Pulsating opacity */
         ctx.fillText(obj.emoji, obj.x, obj.y);
         obj.x += obj.vx;
         obj.y += obj.vy;
@@ -315,18 +429,27 @@
           obj.y = Math.random() * canvas.height;
         }
       });
+      ctx.globalAlpha = 1;
     }
 
     function drawCylinders() {
       metallicCylinders.forEach(c => {
-        ctx.strokeStyle = '#808080';
+        ctx.save();
+        ctx.translate(c.x, c.y);
+        ctx.rotate(c.angle);
+        ctx.strokeStyle = '#4b0082'; /* Indigo cylinders */
         ctx.lineWidth = 5;
         ctx.beginPath();
-        ctx.moveTo(c.x, c.y);
-        ctx.lineTo(c.x + c.length, c.y);
+        ctx.moveTo(0, 0);
+        ctx.lineTo(c.length, 0);
         ctx.stroke();
+        ctx.restore();
         c.x += c.vx;
         c.y += c.vy;
+        if (c.x < -c.length || c.x > canvas.width + c.length || c.y < -c.length || c.y > canvas.height + c.length) {
+          c.x = Math.random() * canvas.width;
+          c.y = Math.random() * canvas.height;
+        }
       });
     }
 
@@ -337,7 +460,6 @@
         ctx.rotate(p.rotation);
         ctx.fillStyle = p.color;
         ctx.beginPath();
-        // More complex polyhedron shape for UFO feel
         ctx.moveTo(0, -p.size);
         ctx.lineTo(p.size * 0.5, -p.size * 0.5);
         ctx.lineTo(p.size, 0);
@@ -352,13 +474,13 @@
 
         p.x += p.vx;
         p.y += p.vy;
-        p.rotation += 0.02; // Faster rotation
+        p.rotation += 0.02;
       });
     }
 
     function spawnEmeraldEntities() {
       const portalEntities = ['🛸','👽','🌀','🌌','☄️','🔮','🪐','♆','⚕'];
-      for (let i = 0; i < glyphCount + 5; i++) { // Tie to slider
+      for (let i = 0; i < glyphCount + 5; i++) {
         const glyph = document.createElement('div');
         glyph.className = 'glyph';
         glyph.innerText = portalEntities[Math.floor(Math.random() * portalEntities.length)];
@@ -369,21 +491,136 @@
       }
     }
 
-    // Interactive canvas click to spawn glyph
+    function spawnCylinders() {
+      for (let i = 0; i < 10; i++) {
+        const speedIndex = Math.floor(Math.random() * cylinderSpeeds.length);
+        const vx = (Math.random() - 0.5) * cylinderSpeeds[speedIndex] * 20;
+        const vy = (Math.random() - 0.5) * cylinderSpeeds[(speedIndex + 1) % cylinderSpeeds.length] * 20;
+        metallicCylinders.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: vx,
+          vy: vy,
+          radius: 8 + Math.random() * 12,
+          length: 50 + Math.random() * 80,
+          angle: Math.atan2(vy, vx)
+        });
+      }
+    }
+
+    let disintegratorActive = false;
+    function toggleDisintegrator() {
+      disintegratorActive = !disintegratorActive;
+      document.getElementById('disintegratorBtn').innerText = disintegratorActive ? '🔫 Disarm Disintegrator' : '🔫 Arm Disintegrator';
+    }
+
+    function resetEntanglement() {
+      polyhedra.length = 0;
+      metallicCylinders = Array.from({length: 15}, (_, i) => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * cylinderSpeeds[i % cylinderSpeeds.length] * 15,
+        vy: (Math.random() - 0.5) * cylinderSpeeds[(i + 1) % cylinderSpeeds.length] * 15,
+        radius: 8 + Math.random() * 12,
+        length: 50 + Math.random() * 80,
+        angle: Math.atan2((Math.random() - 0.5) * cylinderSpeeds[(i + 1) % cylinderSpeeds.length] * 15, (Math.random() - 0.5) * cylinderSpeeds[i % cylinderSpeeds.length] * 15)
+      }));
+      animatedObjects.forEach(obj => {
+        obj.x = Math.random() * canvas.width;
+        obj.y = Math.random() * canvas.height;
+      });
+      document.querySelectorAll('.glyph').forEach(g => g.remove());
+    }
+
+    function submitImprint() {
+      const input = document.getElementById('imprintInput');
+      if (input.value.trim()) {
+        const log = document.getElementById('bookmarkLog');
+        const entry = document.createElement('div');
+        entry.className = 'bookmark-entry';
+        entry.innerText = `💭 ${input.value}`;
+        log.appendChild(entry);
+        log.scrollTop = log.scrollHeight;
+        input.value = '';
+      }
+    }
+
+    const mathSymbols = ['π', 'φ', '√', '∫', '∑', '∞', 'Δ', 'Θ', 'λ', 'μ'];
+    setInterval(() => {
+      const mathDisplay = document.getElementById('mathDisplay');
+      const randomEq = `${mathSymbols[Math.floor(Math.random() * mathSymbols.length)]} = ${ (Math.random() * 10).toFixed(2) } ${mathSymbols[Math.floor(Math.random() * mathSymbols.length)]}`;
+      mathDisplay.innerText = randomEq;
+    }, 3000);
+
+    setInterval(() => {
+      if (Math.random() < 0.1) {
+        spawnGlyphs();
+      } else if (Math.random() < 0.05) {
+        spawnEntities();
+      }
+    }, 5000);
+
     canvas.addEventListener('click', (e) => {
-      const glyph = document.createElement('div');
-      glyph.className = 'glyph';
-      glyph.innerText = glyphs[Math.floor(Math.random() * glyphs.length)];
-      glyph.style.left = e.clientX + 'px';
-      glyph.style.top = e.clientY + 'px';
-      document.body.appendChild(glyph);
-      setTimeout(() => glyph.remove(), 5000);
+      if (disintegratorActive) {
+        const clickX = e.clientX;
+        const clickY = e.clientY;
+        let minDist = Infinity;
+        let removeIndex = -1;
+        polyhedra.forEach((p, i) => {
+          const dist = Math.hypot(p.x - clickX, p.y - clickY);
+          if (dist < minDist && dist < 100) {
+            minDist = dist;
+            removeIndex = i;
+          }
+        });
+        if (removeIndex > -1) polyhedra.splice(removeIndex, 1);
+
+        minDist = Infinity;
+        removeIndex = -1;
+        metallicCylinders.forEach((c, i) => {
+          const dist = Math.hypot(c.x - clickX, c.y - clickY);
+          if (dist < minDist && dist < 100) {
+            minDist = dist;
+            removeIndex = i;
+          }
+        });
+        if (removeIndex > -1) metallicCylinders.splice(removeIndex, 1);
+
+        minDist = Infinity;
+        removeIndex = -1;
+        animatedObjects.forEach((obj, i) => {
+          const dist = Math.hypot(obj.x - clickX, obj.y - clickY);
+          if (dist < minDist && dist < 100) {
+            minDist = dist;
+            removeIndex = i;
+          }
+        });
+        if (removeIndex > -1) {
+          animatedObjects[removeIndex].x = Math.random() * canvas.width;
+          animatedObjects[removeIndex].y = Math.random() * canvas.height;
+        }
+
+        document.querySelectorAll('.glyph').forEach(g => {
+          const gRect = g.getBoundingClientRect();
+          const gX = gRect.left + gRect.width / 2;
+          const gY = gRect.top + gRect.height / 2;
+          const dist = Math.hypot(gX - clickX, gY - clickY);
+          if (dist < 100) g.remove();
+        });
+      } else {
+        const glyph = document.createElement('div');
+        glyph.className = 'glyph';
+        glyph.innerText = glyphs[Math.floor(Math.random() * glyphs.length)];
+        glyph.style.left = e.clientX + 'px';
+        glyph.style.top = e.clientY + 'px';
+        document.body.appendChild(glyph);
+        setTimeout(() => glyph.remove(), 5000);
+      }
     });
 
-    // Draggable ruler circle for interaction
     const rulerCircle = document.getElementById('rulerCircle');
     rulerCircle.addEventListener('dragstart', (e) => {
-      e.dataTransfer.setData('text/plain', ''); // Enable drag
+      e.dataTransfer.setData('text/plain', '');
     });
     rulerCircle.addEventListener('drag', (e) => {
       if (e.clientX > 0) {
@@ -396,6 +633,7 @@
       if (frozen) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       drawStars();
+      drawParticles();
       drawFlyingObjects();
       drawCylinders();
       drawPolyhedra();
@@ -404,7 +642,6 @@
     }
     animate();
 
-    // Responsive resize
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
